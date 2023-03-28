@@ -12,7 +12,7 @@
   command = "CI= npm run build"
 
 [[redirects]]
-  from = "/*"
+  from = "/api"
   to = "https://natter-server-production.up.railway.app/"
   status = 200
  

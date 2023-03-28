@@ -14,7 +14,7 @@ export default function GroupListItem({
     socket.emit("join", arrayGroup.name);
 
     setMessages([]);
-    Axios.get(`/groups/message/${arrayGroup.name}`).then((res) => {
+    Axios.get(`/api/groups/message/${arrayGroup.name}`).then((res) => {
       console.log("Axios Group Add: ", res.data);
       setMessages([...res.data]);
     });

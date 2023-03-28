@@ -52,7 +52,7 @@ function App() {
       });
     });
 
-    Axios.get("/groups")
+    Axios.get("/api/groups")
       .then((res) => {
         console.log("Axios res: ", res);
         // Do stuff with database response
