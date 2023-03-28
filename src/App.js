@@ -8,7 +8,7 @@ import 'react-toastify/dist/ReactToastify.css';
 import { ToastContainer, toast } from 'react-toastify';
 
 const schedule = require('node-schedule');
-const socket = io.connect("http://localhost:8080");
+const socket = io.connect("https://natter-server-production.up.railway.app/");
 
 function App() {
   const [users, setUsers] = useState([]);
