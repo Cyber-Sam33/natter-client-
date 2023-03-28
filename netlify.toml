@@ -13,7 +13,7 @@
 
 [[redirects]]
   from = "/api/*"
-  to = "https://natter-server-production.up.railway.app/"
+  to = "https://natter-server-production.up.railway.app/:splat"
   status = 200
  
  # These are optional
