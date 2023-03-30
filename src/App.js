@@ -40,10 +40,10 @@ function App() {
   const minutes = Number(date.getMinutes());
   const mentalHealthMinutes = ((minutes) => {
     let healthReminderMins = 0;
-    if (minutes <= 57) {
-      healthReminderMins = minutes + 2;
+    if (minutes <= 56) {
+      healthReminderMins = minutes + 3;
     } else {
-      healthReminderMins = minutes - 58;
+      healthReminderMins = minutes - 57;
     }
     return healthReminderMins;
   });
