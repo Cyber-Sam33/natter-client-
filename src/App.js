@@ -34,11 +34,26 @@ function App() {
     setName(name);
   }
 
-  useEffect(() => {
+  // for presentation:
+  const date = new Date();
+  const hours = String(date.getHours());
+  const minutes = Number(date.getMinutes());
+  const mentalHealthMinutes = ((minutes) => {
+    let healthReminderMins = 0;
+    if (minutes <= 57) {
+      healthReminderMins = minutes + 2;
+    } else {
+      healthReminderMins = minutes - 57;
+    }
+    return healthReminderMins;
+  });
 
+  useEffect(() => {
     //strict mode off to get single render
     const rule = new schedule.RecurrenceRule();
-    rule.minute = 30;
+    console.log("RULE ", rule);
+    rule.minute = mentalHealthMinutes(minutes);
+    // console.log("minutes being returned ", mentalHealthMinutes(minutes));
     const job = schedule.scheduleJob(rule, function() {
       toast.success(`Please take regular mental health breaks away from social media!`, {
         position: "bottom-center",
