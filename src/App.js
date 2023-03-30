@@ -43,7 +43,7 @@ function App() {
     if (minutes <= 57) {
       healthReminderMins = minutes + 2;
     } else {
-      healthReminderMins = minutes - 57;
+      healthReminderMins = minutes - 58;
     }
     return healthReminderMins;
   });
